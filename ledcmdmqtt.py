@@ -8,8 +8,8 @@ from Adafruit_IO import MQTTClient
 import RPi.GPIO as GPIO
 
 # Set to your Adafruit IO key & username below.
-ADAFRUIT_IO_KEY      = 'af9fb12618aa406983b4c01fd93952a0'
-ADAFRUIT_IO_USERNAME = 'trimchess'
+ADAFRUIT_IO_KEY      = 'your aio_key'
+ADAFRUIT_IO_USERNAME = 'your username'
 
 #setup GPIO
 led_2 = 25
