@@ -2,14 +2,11 @@ import random
 import sys
 import time
 from datetime import datetime
+import adafruitkey
 
 from Adafruit_IO import MQTTClient
 
 import RPi.GPIO as GPIO
-
-# Set to your Adafruit IO key & username below.
-ADAFRUIT_IO_KEY      = 'your aio_key'
-ADAFRUIT_IO_USERNAME = 'your username'
 
 #setup GPIO
 led_2 = 25
@@ -58,7 +55,7 @@ def message(client, feed_id, payload):
     switchLED(val, led)
 
 # Create an MQTT client instance.
-client = MQTTClient(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
+client = MQTTClient(adafruitkey.ADAFRUIT_IO_USERNAME, adafruitkey.ADAFRUIT_IO_KEY)
 
 # Setup the callback functions defined above.
 client.on_connect    = connected
